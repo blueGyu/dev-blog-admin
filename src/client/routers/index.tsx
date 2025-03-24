@@ -1,4 +1,5 @@
 import App from "@client/App";
+import Layout from "@client/components/Layout";
 import { BrowserRouter, Route, Routes } from "react-router";
 
 const Router = () => {
@@ -6,7 +7,7 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route element={<div>layout</div>}>
+        <Route element={<Layout />}>
           <Route path="posts">
             <Route index element={<h2>post list page</h2>} />
             <Route path=":post_id">
