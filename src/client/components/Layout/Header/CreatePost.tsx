@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import styled from "styled-components";
 
 const StyleButton = styled.button`
@@ -8,7 +9,13 @@ const StyleButton = styled.button`
 `;
 
 const CreatePost = () => {
-  return <StyleButton>글쓰기</StyleButton>;
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/write");
+  };
+
+  return <StyleButton onClick={handleClick}>글쓰기</StyleButton>;
 };
 
 export default CreatePost;
