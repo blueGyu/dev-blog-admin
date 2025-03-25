@@ -13,12 +13,6 @@ const GlobalStyle = createGlobalStyle`
     color: #333;
   }
 
-  main {
-    height: 100%;
-    padding: 1.25rem;
-    padding-top: calc(var(--header-height) + 1.25rem);
-  }
-
   h1 {
     font-size: 2rem;  
   }

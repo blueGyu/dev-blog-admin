@@ -10,6 +10,10 @@ const ResetStyle = createGlobalStyle`
     background: none;
   }
 
+  main {
+    height: 100%;
+  }
+
   textarea, input {
     display: block;
     width: 100%;
