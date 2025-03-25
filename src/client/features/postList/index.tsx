@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import { getPostList } from "./services";
 import Article from "./components/Article";
+import CategoryList from "./components/CategoryList";
 
 const StyledPostContainer = styled.div`
   display: flex;
@@ -17,7 +18,7 @@ const PostList = () => {
 
   useEffect(() => {
     const getPostListFromAPI = async () => {
-      const postList = await getPostList();
+      const postList = await getPostList;
       setPostList(postList);
     };
 
@@ -26,6 +27,7 @@ const PostList = () => {
 
   return (
     <main>
+      <CategoryList />
       <StyledPostContainer>
         {postList.map((post) => (
           <Article {...post} />

@@ -10,3 +10,8 @@ export interface ArticleMetaDataProps {
   views: number;
   created_at: string;
 }
+
+export interface CategoryProps {
+  idx: number;
+  name: string;
+}
