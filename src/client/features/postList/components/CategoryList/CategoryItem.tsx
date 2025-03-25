@@ -19,7 +19,7 @@ const CategoryItem = ({ name }: Pick<CategoryProps, "name">) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/posts/${name}`);
+    navigate(`/posts?category=${name}`);
   };
 
   return <StyledButton onClick={handleClick}>{name}</StyledButton>;
