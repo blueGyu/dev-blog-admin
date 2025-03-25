@@ -1,38 +1,11 @@
-import type { ArticleMetaDataProps } from "./types";
-
-import { useEffect, useState } from "react";
-import styled from "styled-components";
-
-import { getPostList } from "./services";
-import Article from "./components/Article";
+import ArticleList from "./components/ArticleList";
 import CategoryList from "./components/CategoryList";
 
-const StyledPostContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-`;
-
 const PostList = () => {
-  const [postList, setPostList] = useState<ArticleMetaDataProps[]>([]);
-
-  useEffect(() => {
-    const getPostListFromAPI = async () => {
-      const postList = await getPostList;
-      setPostList(postList);
-    };
-
-    getPostListFromAPI();
-  });
-
   return (
     <main>
       <CategoryList />
-      <StyledPostContainer>
-        {postList.map((post) => (
-          <Article {...post} />
-        ))}
-      </StyledPostContainer>
+      <ArticleList />
     </main>
   );
 };

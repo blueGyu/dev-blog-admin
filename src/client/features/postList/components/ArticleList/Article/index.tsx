@@ -1,4 +1,4 @@
-import type { ArticleMetaDataProps } from "../../types";
+import type { ArticleMetaDataProps } from "../../../types";
 
 import { useNavigate } from "react-router";
 import styled from "styled-components";
